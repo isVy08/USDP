@@ -1,0 +1,16 @@
+{
+    "dataset_path": "evaluation/data/turkcorpus.orig",
+    "evaluator_path": "decoder/models/evaluator.pickle",
+    "critic_path": "decoder/models/critic.pickle",
+    "nlp_path": "decoder/models/nlp.pickle",
+    "output_path": "evaluation/outputs/turk_base.pickle",
+    "stat_path": null,
+    "lang": "en",
+
+    "beam_width": 5,
+    "length_ratio": 0.50,
+    "min_similarity": 0.95,
+    "weight": 2,
+    "start": 0, 
+    "end": 360
+}
