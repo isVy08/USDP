@@ -21,3 +21,16 @@ def write_pickle(data, savedir):
   file = open(savedir, 'wb')
   pickle.dump(data, file)
   file.close()
+
+def scale(X, min, max, curr_min=None, curr_max=None):
+    if curr_min is None:
+        curr_min = X.min()
+    if curr_max is None:
+        curr_max = X.max()
+
+    if curr_min == curr_max:
+        return np.ones_like(X)
+
+    X_std = (X - curr_min) / (curr_max - curr_min) + 1e-5
+    X_scaled = X_std * (max - min) + min
+    return X_scaled
