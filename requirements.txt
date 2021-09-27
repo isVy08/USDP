@@ -1,0 +1,8 @@
+spacy
+benepar
+vncorenlp
+numpy
+tqdm
+torch
+sentence-transformers
+argparse
