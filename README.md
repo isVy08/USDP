@@ -1,4 +1,4 @@
-# USPD
+# USDP
 Unsupervised Sentence Simplification via Dependency Parsing
 
 ## Requirments 
@@ -23,7 +23,7 @@ If you wish to train your own Fluency model, instead of using `critic.pickle` or
 
 ### Step 1: Parsing
 * Obtain any corpus (~1M sentences) wherein each line is a sentence
-* Run this command-line to parse each line so that each line is a sequence of constituents, and pickle the data as `train_ngram.data`. 
+* Run this command-line for constituent parsing so that each line now becomes a sequence of constituents. Pickle the data as `train_ngram.data`. 
 
   * English:
   ```
@@ -51,7 +51,7 @@ TurkCorpus and PWKP have their ground-truth references with extension `.simp` an
 Note that the outputs of `RM+EX+LS+RO` on `PWKP` are created by reproducing the experiment from [Edit-Unsup-TS](https://github.com/ddhruvkr/Edit-Unsup-TS)
 
 ## Running USDP
-To reproduce `USDP-base` on English data, simply run
+To reproduce `USDP-Base` on English data, simply run
 ```
 python run_generation.py evaluation/config_en_base.json
 ```
