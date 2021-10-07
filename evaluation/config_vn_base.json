@@ -3,7 +3,7 @@
     "evaluator_path": "decoder/models/mtlevaluator.pickle",
     "critic_path": "decoder/models/vncritic.pickle",
     "nlp_path": null,
-    "output_path": "evaluation/vn_base.pickle",
+    "output_path": "evaluation/outputs/vn_base.pickle",
     "stat_path": null,
     "lang": "vi",
 

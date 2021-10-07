@@ -48,6 +48,8 @@ The `data` folder in `evaluation` contains the testing data of
 
 TurkCorpus and PWKP have their ground-truth references with extension `.simp` and outputs of competing models in a corresponding folder. All data is gratefully borrowed from [EASSE](https://github.com/feralvam/easse) and [Under the Sea NLP](https://github.com/undertheseanlp/resources/tree/master/resources/CP_Vietnamese-VLC).
 
+Note that the outputs of `RM+EX+LS+RO` on `PWKP` are created by reproducing the experiment from [Edit-Unsup-TS](https://github.com/ddhruvkr/Edit-Unsup-TS)
+
 ## Running USDP
 To reproduce `USDP-base` on English data, simply run
 ```
