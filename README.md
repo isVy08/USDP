@@ -51,12 +51,16 @@ TurkCorpus and PWKP have their ground-truth references with extension `.simp` an
 Note that the outputs of `RM+EX+LS+RO` on `PWKP` are created by reproducing the experiment from [Edit-Unsup-TS](https://github.com/ddhruvkr/Edit-Unsup-TS)
 
 ## Running USDP
+### Phase 1: Structural Simplification
 To reproduce `USDP-Base` on English data, simply run
 ```
 python run_generation.py evaluation/config_en_base.json
 ```
 
 Change the path to `evaluation/config_vn_base.json` for Vietnamese simplification. Feel free to modify the parameters to experiment with other variants, such as `USDP-Match`.
+
+### Phase 2: Back Translation
+Successfully completing phase 1 will output sentences that are structurally simpler than the original ones. You can further implement lexical simplification and paraphrasing by back-translating the outputs using any multilingual pre-trained machine translation system. We simply make use of [Google Translate service](http://translate.google.com) in our experiment.    
 
 
 
