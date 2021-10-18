@@ -1,7 +1,7 @@
 # USDP
 Unsupervised Sentence Simplification via Dependency Parsing
 
-## Requirments 
+## Requirements 
 Python 3.6 or 3.7 is required. 
 ```
 cd USDP
