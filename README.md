@@ -1,5 +1,5 @@
 # USDP
-Codes for reproducing experiments in [Unsupervised Sentence Simplification via Dependency Parsing](https://isvy08.github.io/USDP.pdf).
+Codes for reproducing experiments in the paper [Unsupervised Sentence Simplification via Dependency Parsing](https://isvy08.github.io/USDP.pdf).
 
 ## Requirements 
 Python 3.6 or 3.7 is required. 
