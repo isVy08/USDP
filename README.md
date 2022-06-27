@@ -1,5 +1,5 @@
 # USDP
-Codes for reproducing experiments in the paper [Unsupervised Sentence Simplification via Dependency Parsing](https://isvy08.github.io/USDP.pdf).
+Codes for reproducing experiments in the paper [Unsupervised Sentence Simplification via Dependency Parsing](https://arxiv.org/pdf/2206.12261.pdf).
 
 ## Requirements 
 Python 3.6 or 3.7 is required. 
@@ -62,6 +62,15 @@ Change the path to `evaluation/config_vn_base.json` for Vietnamese simplificatio
 ### Phase 2: Back Translation
 Successfully completing phase 1 will output sentences that are structurally simpler than the original ones. You can further implement lexical simplification and paraphrasing by back-translating the outputs using any multilingual pre-trained machine translation system. We simply make use of [Google Translate service](http://translate.google.com) in our experiment.    
 
-
+## References 
+If you use the codes or datasets in this repository, please cite our paper as
+```
+@article{vyvo2022unsupervised,
+  title = {Unsupervised Sentence Simplification via Dependency Parsing},
+  author = {Vo, Vy and Wang, Weiqing and Buntine, Wray},
+  journal={arXiv preprint arXiv:2206.12261},
+  year={2022}
+}
+```
 
 
