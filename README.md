@@ -1,5 +1,5 @@
 # USDP
-Codes for reproducing experiments in the paper [Unsupervised Sentence Simplification via Dependency Parsing](https://arxiv.org/pdf/2206.12261.pdf).
+Codes for reproducing experiments in the paper Unsupervised Sentence Simplification via Dependency Parsing
 
 ## Requirements 
 Python 3.6 or 3.7 is required. 
@@ -64,13 +64,3 @@ Successfully completing phase 1 will output sentences that are structurally simp
 
 ## References 
 If you use the codes or datasets in this repository, please cite our paper as
-```
-@article{vyvo2022unsupervised,
-  title = {Unsupervised Sentence Simplification via Dependency Parsing},
-  author = {Vo, Vy and Wang, Weiqing and Buntine, Wray},
-  journal={arXiv preprint arXiv:2206.12261},
-  year={2022}
-}
-```
-
-
