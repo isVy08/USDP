@@ -1,6 +1,6 @@
 import argparse
-from utils import load, load_pickle, write_pickle
 from decoder.simplifier import *
+from utils import load, load_pickle, write_pickle, Namespace
 
 def get_params():
     parser = argparse.ArgumentParser()
