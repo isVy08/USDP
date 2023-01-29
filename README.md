@@ -26,6 +26,7 @@ python -m spacy download en_core_web_sm
 
 python
 import spacy
+from utils import write_pickle
 nlp = spacy.load("en_core_web_sm")
 write_pickle(nlp, 'nlp.pickle')
 ```
@@ -36,6 +37,7 @@ The pre-trained SBERT models are available [here](https://www.sbert.net/docs/pre
 ```
 python
 from sentence_transformers import SentenceTransformer
+from utils import write_pickle
 model = SentenceTransformer('paraphrase-mpnet-base-v2')
 write_pickle(model, 'evaluator.pickle')
 ```
