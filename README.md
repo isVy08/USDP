@@ -8,20 +8,44 @@ cd USDP
 pip install -r requirements
 ```
 
-## Pre-trained models
-Download pre-trained models into working directory from [this collection](https://drive.google.com/drive/folders/1YLUlufs5g77QyzjP1yW4c54PIa9KwwXS?usp=sharing)
-* Spacy + Benepar Parsing: `nlp.pickle`
+## Model Evaluator
+The pre-trained models used in this experiment include:
+* Spacy + Benepar Parsing: `nlp.pickle` 
 * SBERT sentence embeddings:
-  * Monolingual `paraphrase-mpnet-base-v2 `:  `evaluator.pickle`
+  * Monolingual `paraphrase-mpnet-base-v2`:  `evaluator.pickle`
   * Multilingual `distiluse-base-multilingual-cased-v2`: `mtlevaluator.pickle`
-* Constituent-based 4-gram Kneser-Ney smoothing:
+* Constituent-based 4-gram Kneser-Ney smoothing
   * English: `critic.pickle`
   * Vietnamese: `vncritic.pickle`   
 
-## Fluency model
-If you wish to train your own Fluency model, instead of using `critic.pickle` or `vncritic.pickle`
+### 1. Spacy model 
+`nlp.pickle` is Spacy object for NLP parsing. It can be directly obtained by installing Spacy and calling the object 
+```
+pip install -U spacy
+python -m spacy download en_core_web_sm
 
-### Step 1: Parsing
+python
+import spacy
+nlp = spacy.load("en_core_web_sm")
+write_pickle(nlp, 'nlp.pickle')
+```
+
+### 2. SBERT model 
+The pre-trained SBERT models are available [here](https://www.sbert.net/docs/pretrained_models.html)
+
+```
+python
+from sentence_transformers import SentenceTransformer
+model = SentenceTransformer('paraphrase-mpnet-base-v2')
+write_pickle(model, 'evaluator.pickle')
+```
+
+if `paraphrase-mpnet-base-v2` is no longer avaiable, try `all-mpnet-base-v2`.
+
+### 3. Kneser-Ney smoothing model
+To train the English Fluency model `critic.pickle`, 
+
+#### Step 1: Parsing
 * Obtain any corpus (~1M sentences) wherein each line is a sentence
 * Run this command-line for constituent parsing so that each line now becomes a sequence of constituents. Pickle the data as `train_ngram.data`. 
 
@@ -34,7 +58,7 @@ If you wish to train your own Fluency model, instead of using `critic.pickle` or
   ```
   python run_ngram.py your-data-path train_ngram.data parse vi
   ```
-### Step 2: Training
+#### Step 2: Training
 Run this command-line to train a 4-gram KNS on `train_ngram.data`
 ```
 python run_ngram.py train_ngram.data critic.pickle train
